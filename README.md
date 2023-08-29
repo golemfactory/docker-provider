@@ -2,33 +2,33 @@
 
 ## Requirements
 
--   Docker
--   Docker-compose
--   Linux machine (Nested virtualization enabled)
+- Docker
+- Docker-compose
+- Linux machine (Nested virtualization enabled)
 
 ## Procedure
 
-1. Build Docker image: `docker-compose build`
-2. Start provider: `docker-compose up -d`
+1. Build the Docker image using `docker-compose build`.
+2. Start the provider with `docker-compose up -d`.
 
 ## Configuration
 
-### Switching between mainnet / testnet
+### Switching Between Mainnet and Testnet
 
-By default the provider will start on the testnet, but you can head into the `Dockerfile` and modify CMD with the parameter `--payment-network testnet` to `--payment-network mainnet`
+By default, the provider starts on the testnet. You can switch to the mainnet by modifying the `Dockerfile`. Replace `--payment-network testnet` with `--payment-network mainnet` in CMD.
 
-### Pricing Modification
+### Modifying Prices
 
-Edit `presets.json` within `ya-provider` directory.
+Update the `presets.json` file in the `ya-provider` directory to adjust prices.
 
-### Node Details
+### Modifying Node Details
 
-Modify `globals.json` in `ya-provider` directory: node name, subnet, wallet address.
+Modify the `globals.json` file in the `ya-provider` directory to update node details like node name, subnet, and wallet address.
 
-### Hardware Resources
+### Adjusting Hardware Resources
 
-Adjust `hardware.json` in `ya-provider` directory.
+To adjust the hardware resources, update the `hardware.json` file in the `ya-provider` directory.
 
 ### Scaling Instances
 
-Execute `docker-compose up -d --scale provider=3`
+To scale instances, execute `docker-compose up -d --scale provider=3`.
