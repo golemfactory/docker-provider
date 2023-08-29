@@ -6,16 +6,16 @@ services:
         restart: always
         devices:
             - /dev/kvm:/dev/kvm
-        healthcheck:
-            test: ["CMD-SHELL", "curl -s -o /dev/null -w '%{http_code}' http://localhost:7465 | grep -q 401"]
-            interval: 10s
-            timeout: 5s
-            retries: 1
-            start_period: 40s
-    autoheal:
-        restart: always
-        image: willfarrell/autoheal
-        environment:
-            - AUTOHEAL_CONTAINER_LABEL=all
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
+    #     healthcheck:
+    #         test: ["CMD-SHELL", "curl -s -o /dev/null -w '%{http_code}' http://localhost:7465 | grep -q 401"]
+    #         interval: 10s
+    #         timeout: 5s
+    #         retries: 1
+    #         start_period: 40s
+    # autoheal:
+    #     restart: always
+    #     image: willfarrell/autoheal
+    #     environment:
+    #         - AUTOHEAL_CONTAINER_LABEL=all
+    #     volumes:
+    #         - /var/run/docker.sock:/var/run/docker.sock
