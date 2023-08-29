@@ -10,7 +10,7 @@ ARG YA_VM_VERSION
 ARG YA_DIR_INSTALLER=/ya-installer
 ARG YA_DIR_BIN=/usr/bin
 ARG YA_DIR_PLUGINS=/lib/yagna/plugins
-COPY ./ya-provider/ /root/.local/share/ya-provider/
+COPY /data-node/ya-provider/ /root/.local/share/ya-provider/
 RUN apt-get update -q \
     && apt-get install -q -y --no-install-recommends \
     wget \
@@ -38,4 +38,4 @@ RUN apt-get update -q \
     && cp -R ya-runtime-vm-linux-v${YA_VM_VERSION}/* ${YA_DIR_PLUGINS} \
     && rm -Rf ${YA_DIR_INSTALLER}
 
-CMD ["golemsp run --payment-network testnet" ]
+CMD ["golemsp", "run", "--payment-network", "testnet"]
