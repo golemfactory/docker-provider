@@ -4,7 +4,7 @@
 
 -   Docker
 -   Docker-compose
--   Linux machine (Nested virtualization enabled)
+-   A Linux machine with nested virtualization enabled inside your BIOS
 
 ## Procedure
 
