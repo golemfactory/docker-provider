@@ -16,7 +16,9 @@
 
 ### Switching Between Mainnet and Testnet
 
-By default, the provider starts on the testnet. You can switch to the mainnet by modifying the `Dockerfile`. Replace `--payment-network testnet` with `--payment-network mainnet` in CMD.
+By default, the provider starts on the testnet. You can switch to the mainnet by modifying the `Dockerfile`. Replace `--payment-network testnet` with `--payment-network mainnet` in CMD. 
+
+If you need to, you can also change the subnet by adding `--subnet your-subnet-name` in CMD.
 
 ### Modifying Prices
 
