@@ -2,14 +2,15 @@
 
 ## Requirements
 
-- Docker
-- Docker-compose
-- Linux machine (Nested virtualization enabled)
+-   Docker
+-   Docker-compose
+-   Linux machine (Nested virtualization enabled)
 
 ## Procedure
 
-1. Build the Docker image using `docker-compose build`.
-2. Start the provider with `docker-compose up -d`.
+1. Set your wallet address inside the JSON file located at data-node/ya-provider/globals.json
+2. Build the Docker image using `docker-compose build`.
+3. Start the provider with `docker-compose up -d`.
 
 ## Configuration
 
@@ -19,15 +20,15 @@ By default, the provider starts on the testnet. You can switch to the mainnet by
 
 ### Modifying Prices
 
-Update the `presets.json` file in the `ya-provider` directory to adjust prices.
+Update the `presets.json` file in the `data-node/ya-provider` directory to adjust prices.
 
 ### Modifying Node Details
 
-Modify the `globals.json` file in the `ya-provider` directory to update node details like node name, subnet, and wallet address.
+Modify the `globals.json` file in the `data-node/ya-provider` directory to update node details like node name, subnet, and wallet address.
 
 ### Adjusting Hardware Resources
 
-To adjust the hardware resources, update the `hardware.json` file in the `ya-provider` directory.
+To adjust the hardware resources, update the `hardware.json` file in the `data-node/ya-provider` directory.
 
 ### Scaling Instances
 
