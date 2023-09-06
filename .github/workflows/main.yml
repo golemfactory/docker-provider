@@ -24,5 +24,5 @@ jobs:
           commit-message: "chore: upgrade Yagna to v${{ env.YA_INSTALLER_CORE }}"
           title: "chore: upgrade Yagna to v${{ env.YA_INSTALLER_CORE }}"
           branch: patch/yagna-${{ env.YA_INSTALLER_CORE }}
-          reviewers:  ${{ github.repository_owner }}
+          reviewers: cryptobench
           delete-branch: true
